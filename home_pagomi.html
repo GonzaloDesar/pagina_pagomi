@@ -1,0 +1,55 @@
+<p>
+<script type="text/javascript">// <![CDATA[
+$(document).ready(function(){
+
+/*Array que contiene todas la imagenes para el fondo*/
+var img_p = ["https://66.media.tumblr.com/04df0b83bdc1ae6b64d4ea7268b19000/tumblr_oeo9ofrFL91vhj5yao1_1280.jpg", "https://66.media.tumblr.com/e5e3f5184d4602ad0054223a3c55336d/tumblr_oeo9jv6NR71vhj5yao1_1280.jpg", "https://66.media.tumblr.com/3bad093bc5755c6a8afb000542165097/tumblr_oeo9amxRay1vhj5yao1_1280.jpg", "https://67.media.tumblr.com/4abf9eb8ed07a9b23c08721dee193446/tumblr_oeo8tem4zV1vhj5yao1_1280.jpg"];
+
+/*estable posición alatoria, a la cual el Array debe tener para asignar al fondo*/
+var rand = Math.floor(Math.random()*img_p.length);
+
+
+$('html').css("background-image","url('"+img_p[rand]+"')");
+$('html').css("background-repeat","no-repeat");
+$('html').css("background-position","center center");
+$('html').css("background-attachment","fixed");
+
+/*defien las propiedades para que la iamgen se expanda por todo la etiqueta*/
+$('html').css("-webkit-background-size","cover");
+$('html').css("-moz-background-size","cover");
+$('html').css("-o-background-size","cover");
+$('html').css("background-size","cover");
+
+/*define los tamaños a los divs para que el contenido quede centrado*/
+$('#container, #right, #posts, #para_home_editable').css('max-width','100%');
+$('#container, #right, #posts, #para_home_editable').css('margin-left','auto');
+$('#container, #right, #posts, #para_home_editable').css('margin-right','auto');
+$('#container, #right, #posts, #para_home_editable').css('position','relative');
+$('#container, #right, #posts, #para_home_editable').css('text-align','center');
+$('#container, #right, #posts, #para_home_editable').css('top','50%');
+$('#container, #right, #posts, #para_home_editable').css('text-align','center');
+
+/*elmina el valor por defecto que tiene el div "right" en el css*/
+$('#right').css('float','none');
+
+/*aplica fondo opaco y negro para que se vean las letras y borde blancos */
+$('#para_home_editable').css("background-color","rgba(0, 0, 0, 0.5)");
+
+ 
+ /*este div es para etiqueta de tipo class "post text" para que aplique los cambios cuando se entra al home*/
+ $('#para_home_editable').css('border-top','0px'); 
+ 
+ /*establece estos valores para que el home quede como se espeifica en los requerimientos*/
+ $('body').css("background-color", "transparent");
+ $('#left').css("display","none");
+ $('#footer').css("display","none");
+
+ });
+// ]]></script>
+</p>
+<div id="logo_pame"><img src="https://65.media.tumblr.com/de3619f83c0f6d6d289054e7e2cfb597/tumblr_inline_oeykw1VpTJ1qgirik_500.png" /></div>
+<div id="descr_pame">
+<h1 id="titulo_pame"><a href="#" title="Sobre Pagomi" target="_blank">PaGoMi</a></h1>
+<p><a href="#" title="Galeria de Trabajos" target="_blank">Arte e Ilustraci&oacute;n</a></p>
+
+</div>
